@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-public class Main2Activity extends AppCompatActivity {
+public class second_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.second_acticity);
 
-//        TextView textView = (TextView) findViewById(R.id.name);
-//        textView.setText(name.toString());
+        TextView tv1 = (TextView) findViewById(R.id.tv1);
+
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("number");
-
+        String name = intent.getStringExtra("value");
+         tv1.setText(name.toString());
 
         Log.d("TAG","Value "+ name);
 
